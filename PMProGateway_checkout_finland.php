@@ -315,7 +315,7 @@ class PMProGateway_checkout_finland extends PMProGateway
 	 */
 	static function getMerchant() {
 		return new Checkout\v1\Merchant(
-			pmpro_getOption('checkout_fi_merchant_id'),
+			intval(pmpro_getOption('checkout_fi_merchant_id')),
 			pmpro_getOption('checkout_fi_merchant_secret')
 		);
 	}
